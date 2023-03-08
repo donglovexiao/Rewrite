@@ -11,7 +11,7 @@
 *******************************
 [rewrite_local]
 # > WPS解锁稻壳会员
-^https?:\/\/.+\.(docer.)?wps.cn\/(user\/v1\/vip|android\/mb\/buy|download\/v1\/ios|partner\/invoke\/usable|(api|rank)\/v1(\/mobile\/mb)?\/detail) url script-request-header https://raw.githubusercontent.com/yqc007/QuantumultX/master/WPSDocerVIPowerCrack.js
+^https?:\/\/.+\.(docer.)?wps.cn\/(user\/v1\/vip|android\/mb\/buy|download\/v1\/ios|partner\/invoke\/usable|(api|rank)\/v1(\/mobile\/mb)?\/detail) url script-request-header https://raw.githubusercontent.com/donglovexiao/Rewrite/main/WPSDocerVIPowerCrack.js
 [mitm] 
 hostname = *.docer.wps.cn, vipapi.wps.cn
 *******************************/
