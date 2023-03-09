@@ -14,7 +14,7 @@
 
 [rewrite_local]
 # 完美解锁酷我音乐
-^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).* url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/Kuwo.js
+^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).* url script-response-body https://raw.githubusercontent.com/donglovexiao/Rewrite/main/Kuwo.js
 [mitm] 
 hostname = *.kuwo.cn, *.lrts.me
 ********************************
