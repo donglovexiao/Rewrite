@@ -1,6 +1,6 @@
 /***********************************
 
-> 應用名稱：scannerpro(扫描全能王)
+> 應用名稱：scannerpro
 > 軟件版本：8.7.5
 > 下載地址：https://apps.apple.com/cn/app/id333710667
 > 腳本作者：Cuttlefish
