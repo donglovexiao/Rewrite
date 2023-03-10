@@ -4,9 +4,9 @@
 使用声明：⚠️仅供学习交流，🈲️商业用途
 *******************************
 [rewrite_local]
-# > 美图秀秀(2022.01.17)
-^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/ url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/MeiTuXiuXiu.js
+# > 美图秀秀(2022.04.23)
+^https?://(api|h5).xiuxiu.meitu.com/(v1/user/show.json|v1/vip/vip_show.json|v1/vip/prompt/query.json|v1/h5/vip/sub_detail.json|v1/h5/user/self_show.json|v1/h5/vip/user_detail.json|v1/vip/prompt/query.json|v1/vip/prompt/query.json) url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/MeiTuXiuXiu.js
 
-[mitm] 
-hostname = api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com
+[MITM]
+hostname: api.xiuxiu.meitu.com, h5.xiuxiu.meitu.com
 *******************************/
