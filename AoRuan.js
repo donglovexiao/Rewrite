@@ -1,4 +1,5 @@
 ##############################################
+/*
 # > 脚本功能：傲软抠图解锁会员
 # > TG频道：https://t.me/ddgksf2013
 # > Only for own use, created by ddgksf2013
@@ -14,3 +15,4 @@ https?:\/\/.*\.aoscdn\.com\/base\/vip\/client\/authorizations$ url script-respon
 [mitm] 
 hostname = *.aoscdn.com
 
+*/
