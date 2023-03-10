@@ -6,7 +6,7 @@
 
 [rewrite_local]
 # > 扫描全能王
-^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/donglovexiao/Rewrite/main/CamscannerPro.js
+^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/CamscannerPro.js
 
 [mitm] 
 hostname = ap*.intsig.net
