@@ -10,3 +10,4 @@ https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status ur
 
 [mitm] 
 hostname = user-kaji-api.b612kaji.com
+
