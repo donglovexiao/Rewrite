@@ -39,3 +39,4 @@ https:\/\/www\.52pojie\.cn\/home\.php\? url script-request-header https://raw.gi
 
 #美团签到
 ^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/ url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
+
