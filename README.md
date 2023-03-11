@@ -1,4 +1,5 @@
 # Rewrite
 
-Project Statement: Open source JS scripts are only for learning and communication, welcome to collect, forbid copying, otherwise you will be banned! Commercial use is prohibited, otherwise you will bear all the consequences!
+这个脚本仅用于学习和交流。请不要转载并出售，否则您将承担所有后果！
 
+This script is only for learning and communication. Please do not reprint and sell it，otherwise you will bear all the consequences!
