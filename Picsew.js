@@ -13,6 +13,7 @@
 # > Picsew解锁专业版
 ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/PicsewPro.js
 
+
 [mitm] 
 hostname = buy.itunes.apple.com
 
