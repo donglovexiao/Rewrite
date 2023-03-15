@@ -1,14 +1,11 @@
 
 /***************************************
 
-脚本功能：醒图+剪映+轻颜相机 会员
+脚本功能：醒图+剪映+轻颜相机 解锁会员
 下载地址：appstore
 软件版本：所有
 脚本作者：伟人
 更新时间：2023-03-06
-作者忠告:乱搞会导致脚本失效
-TG反馈群：https://t.me/WeiRenOvO
-TG频道群：https://t.me/WeiRenQAQ
 使用声明：⚠️此脚本仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 
 **************************************
@@ -17,13 +14,14 @@ TG频道群：https://t.me/WeiRenQAQ
 
 #醒图+剪映会员+轻颜相机会员
 
-^http[s]?:\/\/.+((retouchpics)|(faceu)|(ulikecam)).(com|cn|mobi)\/.+(user|\/v1\/homepage\/pro|ever_photo\/space_info).*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/XTJY.js
-^http[s]?:\/\/commerce-api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info\?(iid|.&aid|.&iid).*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/xintu.js
-^http[s]?:\/\/commerce-api-.*\.faceu\.mobi\/commerce\/v1\/.*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/JY.js
-^http[s]?:\/\/commerce-api.faceu.mobi\/commerce\/v1\/subscription\/user_info.*total_memory.*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/jxyq.js
+^http[s]?:\/\/.+((retouchpics)|(faceu)|(ulikecam)).(com|cn|mobi)\/.+(user|\/v1\/homepage\/pro|ever_photo\/space_info).*$ url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/XTJY.js
+^http[s]?:\/\/commerce-api\.faceu\.mobi\/commerce\/v1\/subscription\/user_info\?(iid|.&aid|.&iid).*$ url script-request-header https://raw.githubusercontent.com/donglovexiao/Script/main/xingtu.js
+^http[s]?:\/\/commerce-api-.*\.faceu\.mobi\/commerce\/v1\/.*$ url script-request-header https://raw.githubusercontent.com/donglovexiao/Script/main/JY.js
+^http[s]?:\/\/commerce-api.faceu.mobi\/commerce\/v1\/subscription\/user_info.*total_memory.*$ url script-request-header https://raw.githubusercontent.com/donglovexiao/Script/main/jxyq.js
 
 [mitm]
 hostname = *faceu*,*retouchpics*,*.ulikecam.com
+
 **************************************/
 
 
