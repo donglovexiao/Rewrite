@@ -10,9 +10,10 @@
 ▎支持版本：商店最新 v2.4.20
 使用声明：⚠️仅供学习交流，🈲️商业用途
 *******************************
+
 [rewrite_local]
 
-^https:\/\/appwk\.baidu\.com\/bgk\/(user\/getinfo|doc\/(getdocdownloadcopywriter|quedocsearch\?)) url script-response-body https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/BuGuaKe.js
+^https:\/\/appwk\.baidu\.com\/bgk\/(user\/getinfo|doc\/(getdocdownloadcopywriter|quedocsearch\?)) url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/BuGuaKe.js
 
 [mitm] 
 
