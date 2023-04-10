@@ -9,7 +9,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/(api|member)\.aliyundrive\.com url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/alicloud.js
+^https?:\/\/(api|member)\.aliyundrive\.com url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/AliCloud.js
 
 [mitm]
 hostname = *.aliyundrive.com
