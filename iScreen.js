@@ -10,7 +10,7 @@
 
 [rewrite_local]
 # > iScreen 解锁会员订阅
-^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body  https://raw.githubusercontent.com/donglovexiao/Script/main/iScreen.js
+^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body  https://raw.githubusercontent.com/donglovexiao/Rewrite/main/iScreen.js
 
 [mitm] 
 hostname = buy.itunes.apple.com
