@@ -11,7 +11,7 @@
 
 [rewrite_local]
 
-^https?:\/\/api\.boohee\.com\/app-interface\/.+\/user\/user_info url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/bhjk.js
+^https?:\/\/api\.boohee\.com\/app-interface\/.+\/user\/user_info url script-response-body https://raw.githubusercontent.com/donglovexiao/Rewrite/main/bhjk.js
 
 [mitm] 
 
