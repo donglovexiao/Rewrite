@@ -21,7 +21,7 @@
 【Quantumult X】
 -----------------
 [rewrite_local]
-https:\/\/glados\.rocks\/api\/user\/checkin url script-request-header https://raw.githubusercontent.com/donglovexiao/Rewrite/main/token/GLaDOS.js
+https://glados.rocks/api/user/checkin url script-request-header https://raw.githubusercontent.com/donglovexiao/Rewrite/main/token/GLaDOS.js
 
 [task_local]
 15 7,15 * * * https://raw.githubusercontent.com/donglovexiao/Rewrite/main/token/GLaDOS.js, tag=Glados, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/GLaDOS.png
