@@ -6,10 +6,10 @@ https://fscrm.kraftheinz.net.cn/?from=nkOpOelAJ2CGfXST4N3J9g==    复制链接�
 cookie获取脚本 签到的积分可兑换爱奇艺 腾讯视频会员 手机话费
 
 [rewrite_local]
-https://fscrm.kraftheinz.net.cn/crm/public/index.php/api/v1/getUserInfo url script-request-header https://raw.githubusercontent.com/donglovexiao/Rewrite/main/token/KaFuXiang.js
+https://fscrm.kraftheinz.net.cn/crm/public/index.php/api/v1/getUserInfo url script-request-header https://raw.githubusercontent.com/donglovexiao/Rewrite/main/token/KafuXiang.js
 
 [task_local]
-30 8 * * * https://raw.githubusercontent.com/donglovexiao/Rewrite/main/token/KaFuXiang.js, tag=卡夫享积分签到, img-url=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Image/IMG_0909.jpeg, enabled=true
+30 8 * * * https://raw.githubusercontent.com/donglovexiao/Rewrite/main/token/KafuXiang.js, tag=卡夫享积分签到, img-url=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Image/IMG_0909.jpeg, enabled=true
 [MITM]
 hostname = fscrm.kraftheinz.net.cn
 *****************************************/
