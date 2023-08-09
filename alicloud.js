@@ -14,7 +14,7 @@ https://raw.githubusercontent.com/donglovexiao/Rewrite/main/alicloud.js
 ********************************
 
 [rewrite_local]
-https:\/\/api\.(aliyundrive|alipan)\.com\/apps\/v1\/users\/apps\/welcome url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/alicloud.js
+
 https:\/\/api\.(aliyundrive|alipan)\.com\/v2\/databox\/get_personal_info url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/alicloud.js
 https:\/\/api\.(aliyundrive|alipan)\.com\/business\/v1.0\/users\/vip\/info url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/alicloud.js
 https:\/\/member\.(aliyundrive|alipan)\.com\/v1\/users\/tools url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/alicloud.js
@@ -34,8 +34,12 @@ https:\/\/member\.aliyundrive\.com\/v2\/activity\/sign_in_list url script-respon
 https:\/\/api\.alipan\.com\/business\/v1.0\/users\/coupon\/detail url reject-200
 https:\/\/member\.alipan\.com\/v1\/users\/onboard_list url reject-200
 https:\/\/member\.alipan\.com\/v1\/users\/me url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/alicloud.js
+;https:\/\/api\.(aliyundrive|alipan)\.com\/apps\/v1\/users\/apps\/welcome url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/alicloud.js
+
 
 [mitm]
 hostname = api.aliyundrive.com,member.aliyundrive.com,api.alipan.com,member.alipan.com,auth.alipan.com
 
-*****************/
+**************************/
+
+
