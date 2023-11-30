@@ -22,8 +22,8 @@ DOMAIN,tracking.babytree.com,REJECT
 DOMAIN,mobads-pre-config.cdn.bcebos.com,REJECT 
 
 [Script]
-http-response ^http:\/\/go\.babytree\.com\/go_pregnancy\/api/app_index\/get_app_tab script-path = 宝宝树.js, requires-body = true, tag = 宝宝树底部Tab净化
-http-response ^http:\/\/go\.babytree\.com\/go_pregnancy\/api\/cms_column script-path = 宝宝树.js, requires-body = true, tag = 宝宝我的页面净化
+http-response ^http:\/\/go\.babytree\.com\/go_pregnancy\/api/app_index\/get_app_tab script-path = https://raw.githubusercontent.com/donglovexiao/Script/main/BabyTree.js, requires-body = true, tag = 宝宝树底部Tab净化
+http-response ^http:\/\/go\.babytree\.com\/go_pregnancy\/api\/cms_column script-path = https://raw.githubusercontent.com/donglovexiao/Script/main/BabyTree.js, requires-body = true, tag = 宝宝我的页面净化
 
 [MITM]
 hostname= %APPEND% *.babytree.com
