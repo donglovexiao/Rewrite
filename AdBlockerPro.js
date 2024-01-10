@@ -11,7 +11,7 @@
 
 [rewrite_local]
 # > AdBlocker Pro解锁永久订阅
-^https:\/\/api\.adblockpro\.app\/verify url script-response-body https://raw.githubusercontent.com/donglovexiao/Rewrite/main/1Blocker.js
+^https:\/\/api\.adblockpro\.app\/verify url script-response-body https://raw.githubusercontent.com/donglovexiao/Rewrite/main/AdBlockerPro.js
 
 [mitm] 
 hostname = api.adblockpro.app
