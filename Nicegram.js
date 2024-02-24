@@ -1,14 +1,18 @@
 /******************************
-脚本功能：Nicegram: Unlimited Text+解锁订阅
+脚本功能：Nicegram解锁会员权限
 下载地址：https://is.gd/7OPpId
-软件版本：1.1.2
-脚本作者：彭于晏💞
-更新时间：2022-10-8
+软件版本：1.5.6
+脚本作者：ddgksf2013
+更新时间：2024-2-24
 使用声明：⚠️此脚本仅供学习与交流，请勿转载与贩卖！⚠️⚠️⚠️
 *******************************
 [rewrite_local]
-https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\d{5,10} url echo-response text/json echo-response https://raw.githubusercontent.com/donglovexiao/Script/main//Nicegram.js
+# > Nicegram☆解锁会员权限（2024-02-24）@ddgksf2013
+^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|user\/info|telegram\/auth) url script-response-body https://raw.githubusercontent.com/donglovexiao/Rewrite/main/Nicegram.js
 
 [mitm] 
-hostname=restore-access.indream.app
+hostname=nicegram.cloud
 *******************************/
+
+var body=$response.body.replace(/subscription":\w+/g,'subscription":true');
+$done({body});
