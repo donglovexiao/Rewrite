@@ -7,13 +7,15 @@
 脚本作者：
 更新时间：2024年2月23日 22:55
 电报频道：https://t.me/GieGie777
-问题反馈：
+使用方法：随意填写11位手机号+密码登陆。不要去注册,显示会员但提示开会员就重新登陆。
+变身方法 : 复制-> www.shenhu.live <-重新打开软件->选择允许获取粘贴板。
 使用声明：此脚本仅供学习与交流，请在下载使用24小时内删除！请勿在中国大陆转载与贩卖！
+
 *******************************
 [rewrite_local]
 
 # > 神户直播(重新登陆账号->随意输入11位手机号密码=vip)
-^https?:\/\/gameapi.mma.dstor.cc\/index.php\/App\/(Account\/Login|User\/Info|Index\/Update).*$ url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/SHZB.js
+^https?:\/\/gameapi.mma.dstor.cc\/index.php\/App\/(Account\/Login|User\/Info|Index\/Update).*$ url script-response-body https://raw.githubusercontent.com/donglovexiao/Rewrite/main/SHZB.js
 ^https://www\.shenhu\.click url 302
 
 
