@@ -21,8 +21,8 @@ https://raw.githubusercontent.com/donglovexiao/Rewrite/refs/heads/main/Pillow.js
 
 [rewrite_local]
 # > Pillow 解锁永久年度订阅
-https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts) url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/Pillow.js
-https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts) url script-response-header https://raw.githubusercontent.com/donglovexiao/Script/main/Pillow.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/Pillow.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/donglovexiao/Script/main/Pillow.js
 
 
 [mitm] 
