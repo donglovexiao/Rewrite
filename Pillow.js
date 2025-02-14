@@ -19,13 +19,44 @@ https://raw.githubusercontent.com/donglovexiao/Rewrite/refs/heads/main/Pillow.js
 
 *******************************
 
+此项目也通用如下App解锁订阅：
+
+软件版本：均适配2023.9.8最新 （每一个下载地址对应一个UAMappings）
+下载地址：TouchRetouch 5.1.12
+下载地址：星锤日记 https://is.gd/R5KqD4
+下载地址：倒数鸭  https://is.gd/rETAhp
+下载地址：星垂专注 https://is.gd/rEG9H5
+下载地址：Context https://is.gd/splCnF
+下载地址： Vision-个人OKR目标管理 https://t.cn/A6OxXNxK
+下载地址：Structured-每日计划 https://t.cn/A6cWhz4X
+下载地址：cookie记账 
+下载地址：倒数鸭 
+下载地址：HTTPBOT 2022.2.1 作者zoo
+下载地址：Mypianist 2.08
+下载地址：Appspree https://t.cn/A6otfeAc 3.1
+下载地址：Persona 1.824
+下载地址：WordSwag 4.56
+下载地址：AnkiPro 1.22.1
+下载地址：SmartAI 
+下载地址：AI Chat 
+下载地址：‎AI Type
+下载地址：TextMask
+下载地址：Music Mate
+下载地址：Langster https://too.st/7aW 同作者5个软件 
+下载地址：muse 同作者2个软件
+下载地址：Funexpected 
+下载地址：中国法律
+
+*******************************
+
 [rewrite_local]
 # > Pillow 解锁永久年度订阅
 ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/donglovexiao/Script/main/Pillow.js
 ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/donglovexiao/Script/main/Pillow.js
+https://api.lianjiu.fun/app/api/v1/profile url reject
 
 
 [mitm] 
-hostname = api.revenuecat.com
+hostname = api.revenuecat.com , api.lianjiu.fun
 
 *******************************/
