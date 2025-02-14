@@ -2,7 +2,7 @@
 
 脚本功能：Pillow 解锁永久年度订阅
 软件版本：5.10
-下载地址：http://t.cn/A6Kmswld
+下载地址：https://apps.apple.com/cn/app/pillow-睡眠周期跟踪器/id878691772
 脚本作者：XiaoMao
 更新时间：2023-09-24
 使用声明：⚠️仅供学习交流，🈲️商业用途
