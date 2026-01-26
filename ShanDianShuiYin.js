@@ -25,7 +25,7 @@ let obj = JSON.parse(body);
 
 if (obj.content) {
     obj.content.isPurchasedSubscribe = 1;
-    obj.content.user.maskMobile = "https://t.me/GieGie777";
+    obj.content.user.maskMobile = "Dong";
     obj.content.waterVipInfo = {
         "subscribeCycle": -1,
         "beginTime": "2025-09-09 09:09:09",
