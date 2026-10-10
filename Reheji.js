@@ -5,10 +5,10 @@
 电报频道：https://t.me/ddm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
 
-TouchRetouch、水印熊、SaveLoop、Pixelmator、Planny、Gear、图图记账、Aphrodite、Apollo、MoneyThings、目标地图、Audiomack、PicPure-照片清理大师、
+解锁App：TouchRetouch、水印熊、SaveLoop、Pixelmator、Planny、Gear、图图记账、Aphrodite、Apollo、MoneyThings、目标地图、Audiomack、PicPure-照片清理大师、
 1Blocker、Scanner Pro、Darkroom、ProCam相机、谜底时钟、Pillow、VSCO、Grow、WhiteCloud、Fin、奇妙组件、HillWidget - 纪念日,黑胶，日历，时钟小组件、
 Widgetsmith、vision、Percento、Airmail、Usage、pdfviewer、Spark、谜底黑胶、ColorWidgets、Cocam-相机照片下载、读不舍手、DeviceKit-硬件性能检测与手机管家、
-手机硬件管家、WidgetArt、卡片馆、Gear浏览器、Flow-番茄工作/专注计时器、Focus-专注时间管理、OneWidget-小组件、速记账单、短信喵、西江诗词、
+手机硬件管家、WidgetArt、卡片馆、Gear浏览器、Flow-番茄工作/专注计时器、Focus-专注时间管理、OneWidget-小组件、速记账单、短信喵、西江诗词……等等
 
 **************************************
 
