@@ -17,12 +17,16 @@
 /****************************** 
 脚本功能：GLaDOS / Railgun 自动签到 + 积分兑换（2026-10 修复版）
 Version  : v1.4.0 (Loon/Surge/QX 兼容)
-更新时间：2026-10-02
+更新时间：2026-10-10
 修复内容：
 1. 支持 glados.cloud + 新版 gld:sess Cookie
 2. 设备平台自适应（code 4 device-mismatch 自动切换 UA 重试）
 3. 更准确的重复签到/成功判断
 4. 优先 iOS UA（适合 Loon）
+5. 自动兑换说明：配置项 var EXCHANGE_PLAN = "plan500";
+               plan500：积分达到 500 自动兑换
+               plan100 / plan200：可按需要修改
+               ""：留空则关闭自动兑换
 
 使用说明：
 1. 开启 MitM 并信任证书
@@ -71,7 +75,7 @@ var SCRIPT_NAME = "GLaDOS";
 var SCRIPT_VERSION = "v1.4.0";
 var COOKIES_KEY_PREFIX = "GLaDOS_Cookies";
 var DOMAINS_LIST_KEY = "GLaDOS_Domains";
-var EXCHANGE_PLAN = "plan500";          // 积分≥500自动兑换，可改 plan100 / plan200 / 空字符串关闭
+var EXCHANGE_PLAN = "";         // plan500 积分≥500自动兑换，可改 plan100 / plan200 / 空字符串关闭
 var isGetHeader = typeof $request !== "undefined";
 
 // 平台 UA 库（用于设备自适应）
