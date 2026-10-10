@@ -16,9 +16,9 @@ Widgetsmith、vision、Percento、Airmail、Usage、pdfviewer、Spark、谜底�
 ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/donglovexiao/Rewrite/refs/heads/main/Reheji.js
 ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-request-header https://raw.githubusercontent.com/donglovexiao/Rewrite/refs/heads/main/Reheji.js
 
-#如下两条链接为TouchRetouch专属
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/donglovexiao/Rewrite/main/TouchRetouch.js
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/donglovexiao/Rewrite/main/TouchRetouch.js
+
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/donglovexiao/Rewrite/refs/heads/main/Reheji.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/donglovexiao/Rewrite/refs/heads/main/Reheji.js
 
 [mitm]
 hostname = api.revenuecat.com, api.rc-backup.com
