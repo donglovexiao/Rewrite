@@ -10,7 +10,7 @@ MITM 重写响应体，解锁 Nicegram 会员功能。
 要激活高级版，请单击底部的“助手”，然后单击“释放您的 Nicegram 福利”，最后单击底部的“开始”。完成此操作后，Premium 应该已解锁
 
 [rewrite_local]
-https://nicegram.cloud/api/v6/user/info url script-response-body https://raw.githubusercontent.com/curtinp118/Scripthub/main/scripts/nicegram/nicegram.js
+https://nicegram.cloud/api/v6/user/info url script-response-body https://raw.githubusercontent.com/donglovexiao/Rewrite/main/Nicegram.js
 
 [MITM]
 hostname = nicegram.cloud
