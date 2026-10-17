@@ -1,78 +1,125 @@
-/*************************************
+/****************************** 
+脚本功能：彩云天气 - 解锁会员
+Version  : v1.2.0
+更新时间：2026-06-01
+作者：Curtinp118
+Platform : Quantumult X / Loon / Surge
 
-项目名称：彩云天气-净化/解锁SVIP
-下载地址：https://t.cn/A66d95hV
-更新日期：2024-04-12
-脚本作者：chxm1023
-电报频道：https://t.me/chxm1023
-使用声明：⚠️仅供参考，🈲转载与售卖！
-
-**************************************
+使用说明：
+MITM 重写响应体，解锁彩云天气会员功能。
 
 [rewrite_local]
-^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners|operation\/homefeatures|config)|p\/v\d\/(vip_info|user_info|entries|privileges|trial_card\/info)) url script-response-body https://raw.githubusercontent.com/donglovexiao/Rewrite/main/CaiYunWeather.js
-^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images) url script-request-header https://raw.githubusercontent.com/donglovexiao/Rewrite/main/CaiYunWeather.js
+^https://biz\.cyapi\.cn/ url script-response-body https://raw.githubusercontent.com/donglovexiao/Rewrite/main/CaiYunWeather.js
 
-[mitm]
-hostname = *.cyapi.cn, *.caiyunapp.com
+[MITM]
+hostname = biz.cyapi.cn
+*******************************/
 
-*************************************/
+// ========== 三端适配层 ==========
+var isQX = typeof $task !== "undefined";
+var isLoon = typeof $loon !== "undefined";
+var isSurge = typeof $httpClient !== "undefined" && !isLoon;
 
+var $http = {
+  fetch: function (opts) {
+    if (isQX) return $task.fetch(opts);
+    return new Promise(function (resolve, reject) {
+      var method = (opts.method || "GET").toUpperCase();
+      var handler = function (err, resp, data) {
+        if (err) reject(err);
+        else resolve({ statusCode: resp.statusCode, headers: resp.headers, body: data });
+      };
+      if (method === "POST") $httpClient.post(opts, handler);
+      else $httpClient.get(opts, handler);
+    });
+  }
+};
 
-const chxm1024 = {};
-const chxm1023 = JSON.parse(typeof $response != "undefined" && $response.body || null);
-const url = $request.url;
-const adUrl = /(activity\?app_name|operation\/banners)/;
-const tcUrl = /conditions/;
-const vipUrl = /https:\/\/biz\.(cyapi\.cn|caiyunapp\.com)\/p\/v\d\/vip_info/;
-const userUrl = /https:\/\/biz\.(cyapi\.cn|caiyunapp\.com)\/v\d\/user\?app_name/;
-const syUrl = /trial_card\/info/;
-const qyUrl = /entries/;
-const peUrl = /privileges/;
-const topUrl = /operation\/homefeatures/;
+var $store = {
+  read: function (key) { return isQX ? $prefs.valueForKey(key) : $persistentStore.read(key); },
+  write: function (val, key) { return isQX ? $prefs.setValueForKey(val, key) : $persistentStore.write(val, key); }
+};
 
-if (typeof $response == "undefined") {
-  chxm1024.headers = $request.headers;
-  chxm1024.headers['device-token'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uIjoiNjVkMzY2OTRmY2FjMDgwMDE0NDlkODMzIiwidXNlcl9pZCI6IjVmNWJmYzU3ZDJjNjg5MDAxNGUyNmJiOCIsInZlcnNpb24iOjIsImV4cCI6MTcxNjEyOTE3MiwidmlwX2V4cGlyZWRfYXQiOjAsImlzcyI6IndlYXRoZXIiLCJpYXQiOjE3MDgzNTMxNzIsInN2aXBfZXhwaXJlZF9hdCI6MTg1MTUwMTAzMSwicHJpbWFyeSI6dHJ1ZX0.U_LCYNGl3cbBCpjrnjmxYBAuNFSvNCe3dKIrV1MGpzo';
-} else {
-  switch (true) {
-    case adUrl.test(url):
-      chxm1023.status = "ok";
-      chxm1023.activities = [{"items":[{}]}];
-      chxm1023.data = [];
-      break;
-    case tcUrl.test(url):
-      chxm1023.actions = [];
-      chxm1023.popups = [];
-      break;
-    case vipUrl.test(url):
-      chxm1023.vip = {  ...chxm1023.vip,
-  "expires_time" : "4092599349",  "is_auto_renewal" : true  };
-      chxm1023.svip =  {  ...chxm1023.svip,  "expires_time" : "4092599349",  "is_auto_renewal" : true  };
-      chxm1023.show_upcoming_renewal = false;
-      break;
-    case userUrl.test(url):
-      chxm1023.result = { ...chxm1023.result,  is_vip: true,  vip_expired_at: 4092599349,  svip_given: 1,  is_xy_vip: true,  xy_svip_expire: 4092599349,  wt: {  ...chxm1023.result.wt,  vip: {  ...chxm1023.result.wt.vip,  "expired_at" : 0,  "enabled" : true,  "svip_apple_expired_at" : 4092599349,  "is_auto_renewal" : true,  "svip_expired_at" : 4092599349    },    svip_given: 1,  },  is_phone_verified: true,  vip_take_effect: 1,  is_primary: true,  xy_vip_expire: 4092599349,  svip_expired_at: 4092599349,  svip_take_effect: 1,  vip_type: "s",  };
-      break;
-    case syUrl.test(url):
-      chxm1023.receive_status = 0;
-      chxm1023.vip_type = "svip";
-      chxm1023.activated_at = 1712600671;
-      chxm1023.vip_duration = "999";
-      chxm1023.expired_at = 4092599349;
-      chxm1023.has_valid_card = 0;
-      break;
-    case qyUrl.test(url):
-      chxm1023["entries"] = [{  "url" : "https://t.me/chxm1023",  "id" : 1,  "name" : "叮当猫",  "type" : 1,  "pos" : 2  }];
-      break;
-    case peUrl.test(url):
-      chxm1023["privileges"] = [{  "vip_type" : "svip",  "subscription_chat_quota" : 999  }];
-      break;
-    case topUrl.test(url):
-      chxm1023["data"] = [{  "badge_type" : "",  "title" : "叮当猫",  "url" : "https://t.me/chxm1023",  "feature_type" : "",  "avatar" : "https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/ddm2.png"  },...chxm1023.data];
-      break;
-    }
-  chxm1024.body = JSON.stringify(chxm1023);
+var notifyFn = isQX
+  ? function (t, s, b) { $notify(t, s, b); }
+  : function (t, s, b) { $notification.post(t, s, b); };
+
+// ========== Logger 模块 ==========
+var Logger = {
+  scriptStart: function (name, version, platform, requestType) {
+    var now = new Date();
+    var pad = function (n) { return String(n).padStart(2, "0"); };
+    var time = now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate()) + " " + pad(now.getHours()) + ":" + pad(now.getMinutes()) + ":" + pad(now.getSeconds());
+    console.log("🚀 Script Start");
+    console.log("Time     : " + time);
+    console.log("Version  : " + version + " | " + platform + " | " + requestType);
+    console.log("Platform : " + platform);
+    console.log("------------------------------------");
+  },
+
+  field: function (label, value) {
+    var padding = "              ";
+    var key = (label + padding).substring(0, 14);
+    console.log(key + ": " + value);
+  },
+
+  status: function (icon, text) { this.field("Status", icon + " " + text); },
+  message: function (val) { this.field("Message", val); },
+  separator: function () { console.log("------------------------------------"); },
+  summary: function (total, success, failed, result) {
+    console.log("📊 Summary");
+    console.log("Total      : " + total);
+    console.log("Success    : " + success);
+    console.log("Failed     : " + failed);
+    console.log("🎯 Result  : " + result);
+    console.log("End");
+  }
+};
+
+function getPlatform() {
+  if (isQX) return "Quantumult X";
+  if (isLoon) return "Loon";
+  if (isSurge) return "Surge";
+  return "Unknown";
 }
 
-$done(chxm1024);
+function done(body) {
+  $done({ body: typeof body === "string" ? body : JSON.stringify(body) });
+}
+
+function run() {
+  var platform = getPlatform();
+  Logger.scriptStart("彩云天气", "v1.2.0", platform, "Response");
+
+  var raw = ($response && $response.body) ? $response.body : "";
+  if (!raw) {
+    Logger.status("❌", "Empty response body");
+    return done("");
+  }
+
+  var body;
+  try {
+    body = JSON.parse(raw);
+  } catch (e) {
+    Logger.status("❌", "JSON parse error");
+    return done(raw);
+  }
+
+  if ($request.url.indexOf("/v2/user") !== -1) {
+    body.result.is_vip = true;
+    body.result.vip_type = "s";
+    body.result.svip_expired_at = 4070951226;
+    Logger.status("✅", "VIP unlocked");
+  }
+
+  Logger.separator();
+  Logger.summary(1, 1, 0, "Success");
+  done(JSON.stringify(body));
+}
+
+try {
+  run();
+} catch (e) {
+  console.log("fatal:", e);
+  done($response?.body || "");
+}
