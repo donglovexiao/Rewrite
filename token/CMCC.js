@@ -9,10 +9,10 @@ Platform : Quantumult X / Loon / Surge
 访问中国移动签到页面保存 Cookie，定时任务自动签到领奖。
 
 [rewrite_local]
-^https?://wx\.10086\.cn/qwhdhub/ url script-request-header https://raw.githubusercontent.com/donglovexiao/Rewrite/token/main/CMCC.js
+^https?://wx\.10086\.cn/qwhdhub/ url script-request-header https://raw.githubusercontent.com/donglovexiao/Rewrite/main/token/CMCC.js
 
 [task_local]
-18 8 * * * https://raw.githubusercontent.com/donglovexiao/Rewrite/token/main/CMCC.js, tag=中国移动签到, enabled=true
+18 8 * * * https://raw.githubusercontent.com/donglovexiao/Rewrite/main/token/CMCC.js, tag=中国移动签到, enabled=true
 
 [MITM]
 hostname = %APPEND% wx.10086.cn
